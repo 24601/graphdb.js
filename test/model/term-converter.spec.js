@@ -1,7 +1,6 @@
 const TermConverter = require('model/term-converter');
 const DataFactory = require('service/data-factory');
 
-
 const {NamedNode, Variable} = DataFactory.internal;
 
 describe('TermConverter', () => {
