@@ -1,4 +1,4 @@
-const DataFactory = require('service/data-factory');
+const DataFactory = require('../service/data-factory');
 const ContentParser = require('../parser/content-parser');
 const RDFMimeType = require('../http/rdf-mime-type');
 const QueryType = require('../query/query-type');
