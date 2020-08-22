@@ -103,7 +103,12 @@ class HttpClient {
     config.method = config.method.toUpperCase();
     this.logger.error({config}, 'Executing axios request');
     
-    return this.axios[config.method.toLowerCase()](config);
+    if(config.method === "PUT")
+    {
+      return this.axios.put(config.url,config.data,config); 
+    }
+    
+    return this.axios.request(config);
   }
 
   /**
