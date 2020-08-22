@@ -100,6 +100,7 @@ class HttpClient {
    */
   request(requestBuilder) {
     const config = this.getRequestConfig(requestBuilder);
+    config.method = config.method.toUpperCase();
     this.logger.trace({config}, 'Executing request');
     return this.axios.request(config);
   }
