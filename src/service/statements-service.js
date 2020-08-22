@@ -215,9 +215,9 @@ class StatementsService extends Service {
       });
 
     if (overwrite) {
-      requestBuilder.setMethod('put');
+      requestBuilder.setMethod('PUT');
     } else {
-      requestBuilder.setMethod('post');
+      requestBuilder.setMethod('POST');
     }
 
     return requestBuilder;
