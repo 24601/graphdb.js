@@ -106,7 +106,9 @@ class HttpClient {
     if(config.method.trim().toLowerCase() === 'put')
     {
       this.logger.error("Calling PUT explicitly in HttpClient");
-      return this.axios.put(config.url,config.data,config);
+      const conf = {...config};
+      delete conf.method;
+      return this.axios.put(config.url,config.data,conf);
     }
     
     
