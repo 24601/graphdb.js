@@ -244,7 +244,7 @@ class HttpRequestBuilder {
    * @return {HttpRequestBuilder}
    */
   setMethod(method) {
-    this.config.method = method;
+    this.config.method = method.toUpperCase();
     return this;
   }
 
