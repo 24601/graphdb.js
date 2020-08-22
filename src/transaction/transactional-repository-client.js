@@ -81,7 +81,7 @@ class TransactionalRepositoryClient extends BaseRepositoryClient {
    */
   decorateServiceRequest(serviceRequest, action) {
     const requestBuilder = serviceRequest.getHttpRequestBuilder();
-    requestBuilder.setMethod('put').setUrl('').addParam('action', action);
+    requestBuilder.setMethod('PUT').setUrl('').addParam('action', action);
   }
 
   /**
