@@ -46,7 +46,7 @@ class HttpRequestBuilder {
    * @return {HttpRequestBuilder}
    */
   static httpPut(url) {
-    return new HttpRequestBuilder().setMethod('put').setUrl(url);
+    return new HttpRequestBuilder().setMethod('PUT').setUrl(url);
   }
 
   /**
