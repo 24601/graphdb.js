@@ -102,7 +102,8 @@ class HttpClient {
     const config = this.getRequestConfig(requestBuilder);
     config.method = config.method.toUpperCase();
     this.logger.error({config}, 'Executing axios request');
-    return this.axios.request(config);
+    
+    return this.axios[config.method.toLowerCase()](config);
   }
 
   /**
