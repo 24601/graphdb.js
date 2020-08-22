@@ -254,7 +254,7 @@ class HttpRequestBuilder {
    * @return {string}
    */
   getMethod() {
-    return this.config.method;
+    return this.config.method.toUpperCase();
   }
 
   /**
