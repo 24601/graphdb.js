@@ -101,7 +101,7 @@ class HttpClient {
   request(requestBuilder) {
     const config = this.getRequestConfig(requestBuilder);
     config.method = config.method.toUpperCase();
-    this.logger.trace({config}, 'Executing request');
+    this.logger.error({config}, 'Executing axios request');
     return this.axios.request(config);
   }
 
@@ -144,7 +144,7 @@ class HttpClient {
    */
   addDefaultTimeout(requestBuilder) {
     if (!requestBuilder.getTimeout()) {
-      if (requestBuilder.getMethod() === 'get') {
+      if (requestBuilder.getMethod() === 'GET') {
         requestBuilder.setTimeout(this.readTimeout);
       } else {
         requestBuilder.setTimeout(this.writeTimeout);
